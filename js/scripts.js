@@ -1,24 +1,13 @@
-var consumer = 0;
-
-
-function Pizza (size, topping){
+function Pizza (size, topping, price){
+	debugger;
 	this.size = size;
-	this.toppng = topping;
+	this.topping = topping;
+	this.price = price;
 }
 
-Pizza.prototype.totalPrice = function () {
-	if (topping === "sasauge") {
-		size * .3;
-	} if (topping === "pinapple") {
-		size * .4;
-	} if (topping === "pepporini") {
-		size * .5;
-	}
-	return this.topping + "pizza";
+Pizza.prototype.fullOrder = function () {
+	return this.topping + " " + "Pizza";
 };
-
-
-
 
 
 
@@ -31,10 +20,18 @@ $(document).ready(function(){
 		var large = new Pizza(14)
 		var pizzaSize = $("#sizes").val();
 		var toppings = $("input:radio[name=topping]:checked").val();
-
 		var newPizza = new Pizza(pizzaSize, toppings);
+		var cost = new Pizza(pizzaSize * toppings);
+		$("ul#order").append("<li><span class = 'order'>" + newPizza.fullOrder()  + "</span></li>");
+		  $('.order').last().click(function(){
+				$("#show-order").show();
+				$('#show-order h2').text(newPizza.topping + " " + "Pizza");
+				$('.pizza').text(newPizza.size);
+				$('.topping').text(newPizza.topping);
 
-		$("#order").text(pizzaSize + toppings);
 
+				$('.total').text(cost);
+
+		});
 	});
 });

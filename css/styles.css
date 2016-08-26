@@ -1,0 +1,11 @@
+.order {
+	cursor: pointer;
+	color: blue;
+}
+.order:hover {
+	text-shadow: 1px 1px 1px black;
+	text-decoration: underline;
+}
+#show-order {
+	display: none;
+}
