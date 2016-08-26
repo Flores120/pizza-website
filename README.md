@@ -8,7 +8,7 @@
 * **example Output** * 1.3
 
 * More than one person can order a pizza
-* **Example Input**  Two people pizzas
+* **Example Input**  Two different people order pizzas
 * **Example Output** Pepperoni Pizza, Pineapple Pizza
 
 
