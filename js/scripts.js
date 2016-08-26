@@ -30,16 +30,7 @@ $(document).ready(function(){
 			event.preventDefault();
 			var pizzaSize = $("#sizes").val();
 			var toppings = $("input:radio[name=topping]:checked").val();
-			// var cost = toppings;
-			// if (cost === "Sausage"){
-			// 	cost = 1.2;
-			// } else if (cost === "Pineapple") {
-			// 		cost = 1.3;
-			// } else {
-			// 	cost = 1.4;
-			// }
 			var pizza = new Pizza (pizzaSize, toppings);
-
 			$("ul#order").append("<li><span class = 'order'>" + pizza.topping + " " + "Pizza" + "</span></li>");
 			$('.order').last().click(function(){
 				$("#show-order").show();
