@@ -1,22 +1,13 @@
 var consumer = 0;
 
-function Pizza (size){
-	debugger
+
+function Pizza (size, topping){
 	this.size = size;
-	if (size === "small"){
-		this.price = 8;
-	} else if (this.size === "medium") {
-		this.price = 12;
-	} else if (size = "large") {
-		this.price = 14;
-	}
+	this.topping = topping;
 }
+Pizza.prototype.totalPrice = function () {
 
-function price (price){
-	this.price = price;
-}
-
-
+};
 
 
 
@@ -25,12 +16,13 @@ function price (price){
 
 // Front end work
 $(document).ready(function(){
-	$("form").submit(function(event){
+	$("form").submit(function(){
 		event.preventDefault();
-		var small = $("#small").val();
-		var medium = $("#medium").val();
-		var large = $("#large").val();
-		var newPizza = new Pizza(small, medium, large);
-		$("#order").append(newPizza.size);
+		var small = new Pizza(8)
+		var medium = new Pizza(12)
+		var large = new Pizza(14)
+		var pizzaSize = $("#sizes").val();
+		var toppings = $("input:radio[name=topping]:checked").val();
+
 	});
 });
