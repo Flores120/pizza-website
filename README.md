@@ -17,41 +17,48 @@
 * **Example Output** Pepperoni Pizza, Size: medium Toppings: Pepperoni: Total: $
 
 
-# _Pizza Website_
-
-#### _A site where people can order a pizza_
-
-#### By _**Alvaro Flores**_
-
-## Description
-
-_This website can collect the users pizza information they input and spit back the size, type and the cost of the pizza_
-
-## Setup/Installation Requirements
-
-* _Go to to my github page_
-* _copy my URL_
-* _git clone_
-* _start ordering
 
 
-## Known Bugs
+# Pizza Website
 
-_There are no issues with the site that I know of. _
+A site where people can order a pizza
 
-## Support and contact details
+## Getting Started
 
-_Please contact me if there is any issue with my site, i will get on it as soon as I can_
+Go to to my Github page.
+Copy my URL.
+git clone
+start ordering
 
-## Technologies Used
 
-_HTML_
-_CSS_
-_Jquery_
-_Javascript_
-_Bootstrap_
-### License
+### Prerequisites
 
-*This site is licensed under MIT*
+Git
+
+### Installing
+
+Go to to my Github page.
+Copy my URL.
+git clone
+start ordering
+
+## Built With
+* HTML
+* CSS
+* Jquery
+* Javascript
+* Bootstrap
+
+## Contributing
+
+Alvaro Flores
+
+## Authors
+
+By Alvaro Flores
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
 
 Copyright (c) 2016 **_Alvaro Flores @Epicodus**
