@@ -6,7 +6,6 @@ function Pizza (size, topping){
 }
 
 Pizza.prototype.fullPrice = function (price) {
-	// debugger;
 			if (this.size === "Small"){
 				this.size = 10;
 	} 	if (this.size === "Medium") {
@@ -22,22 +21,44 @@ Pizza.prototype.fullPrice = function (price) {
 				return this.size * 1.4;
 		}
 }
-
-
-// Front end work
 $(document).ready(function(){
 		$("form").submit(function(event){
 			event.preventDefault();
 			var pizzaSize = $("#sizes").val();
 			var toppings = $("input:radio[name=topping]:checked").val();
 			var pizza = new Pizza (pizzaSize, toppings);
-			$("ul#order").append("<li><span class = 'order'>" + pizza.topping + " " + "Pizza" + "</span></li>");
+			var price = pizza.fullPrice();
+			var arr = [];
+			var join = arr.push(price);
+			for (var i = 0; i < join.length; i++) {
+				var con = arr.concat(join[i]);
+			}
+			if (pizza.topping === undefined) {
+				alert("Please select a pizza")
+			} else {
+				document.getElementById('orderIn').style.background = "rgba(0, 0, 0, .8)"
+				document.getElementById('yourorder').innerHTML = "Your Order";
+				$("ul#order").append("<li><span class = 'order'>" + pizza.topping + " " + "Pizza" + "</span></li>");
+			}
 			$('.order').last().click(function(){
 				$("#show-order").show();
-				$('#show-order h2').text(pizza.topping + " " + "Pizza");
-				$('.pizza').text(pizza.size);
-				$('.topping').text(pizza.topping);
-				$('.total').text("$" + pizza.fullPrice().toFixed(2));
+				if (pizza.topping === undefined) {
+
+				} else {
+					$('#show-order h2').text(pizza.topping + " " + "Pizza");
+					$('.pizza').text(pizza.size);
+					$('.topping').text(pizza.topping);
+					$('.total').text("$" + pizza.fullPrice().toFixed(2));
+				}
+
+				if (pizza.topping === "Pineapple") {
+					$("#image").html('<img src="./img/pineapple.png" />');
+				} else if (pizza.topping === "Pepperoni") {
+					$("#image").html('<img src="./img/pepperoni.png" />');
+				} else {
+					$("#image").html('<img src="./img/sausage.png" />');
+				}
 		});
 	});
 });
+// var total =
