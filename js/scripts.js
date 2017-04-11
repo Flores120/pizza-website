@@ -46,7 +46,7 @@ $(document).ready(function(){
 
 			}
 			$('.order').last().click(function(){
-				$("#show-order").show();
+				$("#show-order").show(1000);
 				if (pizza.topping === undefined) {
 
 				} else {

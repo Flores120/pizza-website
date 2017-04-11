@@ -115,4 +115,10 @@ label {
   font-size: 20px;
   bottom: 45px;
   left: 392px;
+	animation: color 5s infinite linear;
+}
+@keyframes color {
+	0% {color: white;}
+	50% {color: #4a85e2;}
+	100% {color: white;}
 }
