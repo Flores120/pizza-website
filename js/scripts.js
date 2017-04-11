@@ -35,7 +35,7 @@ $(document).ready(function(){
 			sum += arr[i];
 		}
 		var cost = sum;
-		document.getElementById("cost").innerHTML = "$" + cost.toFixed(2);
+		document.getElementById("cost").innerHTML = "Total Cost: " + "$" + cost.toFixed(2);
 		if (pizza.topping === undefined) {
 			alert("Please select a pizza")
 		} else {
