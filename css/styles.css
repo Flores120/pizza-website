@@ -82,10 +82,14 @@ label {
 }
 #order {
 	margin-left: -35px;
+	margin-top: -34px;
   font-size: 20px;
   font-weight: bold;
   background: none;
   color: #4a85e2;
+}
+#order li {
+	margin-bottom: 4px;
 }
 #order:hover {
 	cursor: pointer;
