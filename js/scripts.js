@@ -19,6 +19,9 @@ Pizza.prototype.fullPrice = function (price) {
 				return this.size * 1.4;
 		}
 }
+var arr = [];
+var sum = 0;
+
 $(document).ready(function(){
 		$("form").submit(function(event){
 			event.preventDefault();
@@ -26,17 +29,21 @@ $(document).ready(function(){
 			var toppings = $("input:radio[name=topping]:checked").val();
 			var pizza = new Pizza (pizzaSize, toppings);
 			var price = pizza.fullPrice();
-			var arr = [];
 			var join = arr.push(price);
-			for (var i = 0; i < join.length; i++) {
-				var con = arr.concat(join[i]);
+			sum = 0;
+			for(var i= 0 ; i < arr.length; i++){
+				sum += arr[i];
 			}
+			var cost = sum;
+			console.log(cost);
+			document.getElementById("cost").innerHTML = "$" + cost.toFixed(2);
 			if (pizza.topping === undefined) {
 				alert("Please select a pizza")
 			} else {
 				document.getElementById('orderIn').style.background = "rgba(0, 0, 0, .8)"
 				document.getElementById('yourorder').innerHTML = "Your Order";
 				$("ul#order").append("<li><span class = 'order'>" + pizza.topping + " " + "Pizza" + "</span></li>");
+
 			}
 			$('.order').last().click(function(){
 				$("#show-order").show();
@@ -59,4 +66,3 @@ $(document).ready(function(){
 		});
 	});
 });
-// var total =
